@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trendyol KSA Seller Calculator | Pro Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    boxShadow: {
+                        '3d-light': '10px 10px 20px #d1d9e6, -10px -10px 20px #ffffff',
+                        '3d-light-inset': 'inset 5px 5px 10px #d1d9e6, inset -5px -5px 10px #ffffff',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --accent: #F97316;
+        }
+        
+        body { 
+            transition: background-color 0.5s ease, color 0.5s ease;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .dark body { 
+            background-color: #08090D;
+            color: #E2E8F0;
+        }
+
+        .light body {
+            background-color: #E6E9EF;
+            color: #1E293B;
+        }
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* 3D Neumorphism & Glassmorphism */
+        .glass-card {
+            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        .dark .glass-card {
+            background: rgba(22, 27, 34, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .light .glass-card {
+            background: #E6E9EF;
+            box-shadow: 20px 20px 60px #c4c6cb, -20px -20px 60px #ffffff;
+            border-radius: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .light .glass-input {
+            background: #E6E9EF;
+            box-shadow: inset 6px 6px 12px #c4c6cb, inset -6px -6px 12px #ffffff;
+            border: none;
+        }
+
+        .dark .glass-input {
+            background: #1A1B23;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: inset 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .glass-card-hover:hover {
+            transform: translateY(-5px);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .animate-float { animation: float 5s ease-in-out infinite; }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(148, 163, 184, 0.3);
+            border-radius: 10px;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body class="custom-scrollbar overflow-x-hidden">
+    <div id="root"></div>
+</body>
+</html>

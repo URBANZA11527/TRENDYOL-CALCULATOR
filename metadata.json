@@ -1,0 +1,5 @@
+{
+  "name": "Trendyol KSA Seller Calculator",
+  "description": "A professional-grade financial calculator for Trendyol KSA sellers, supporting single item analysis and bulk CSV processing with exact formula parity for profit margins, campaign impacts, and fees.",
+  "requestFramePermissions": []
+}
